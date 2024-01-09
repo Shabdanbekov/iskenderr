@@ -1,0 +1,44 @@
+.map-container {
+  width: 100%;
+  padding: 0 0 50px 0;
+
+  .searc-titles {
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+    border-radius: 10px;
+    background: #fff;
+
+    input {
+      width: 100%;
+      outline: none;
+      border: none;
+      padding: 15px 0;
+
+      &::placeholder {
+        color: var(--grey-2, #727272);
+        font-size: 15px;
+        font-weight: 400;
+      }
+    }
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  .all-branches {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .all-branches {
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+    }
+  }
+}
